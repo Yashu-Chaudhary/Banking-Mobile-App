@@ -35,6 +35,7 @@ dependencies:
 
 # ---------------util dependencies------------------
   patterns_canvas: ^0.4.0
+  get: ^4.6.6
   
 
   

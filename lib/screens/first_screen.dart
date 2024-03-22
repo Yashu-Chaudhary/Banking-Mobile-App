@@ -1,8 +1,10 @@
 import 'package:banking_mobile_app/utils/comman/detail_container.dart';
+import 'package:banking_mobile_app/utils/comman/expandable_row.dart';
 import 'package:banking_mobile_app/utils/constants/string_texts.dart';
 import 'package:banking_mobile_app/utils/comman/header.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({
@@ -41,14 +43,7 @@ class FirstScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             // three buttons
-             Row(
-              children: [
-                Container(),
-                Container(),
-                Container(),
-              ],
-            ),
-
+           const PExpendableButtonRow(),
             const SizedBox(height: 20),
 
             // Text

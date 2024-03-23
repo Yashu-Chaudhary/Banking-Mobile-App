@@ -4,10 +4,7 @@ import 'package:banking_mobile_app/utils/comman/user_account_detail_container.da
 import 'package:banking_mobile_app/utils/constants/string_colors.dart';
 import 'package:banking_mobile_app/utils/constants/string_images.dart';
 import 'package:banking_mobile_app/utils/constants/string_texts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SendMoneyPage extends StatelessWidget {

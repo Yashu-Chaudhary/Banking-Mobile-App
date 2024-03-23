@@ -4,8 +4,8 @@ import 'package:banking_mobile_app/utils/constants/string_texts.dart';
 import 'package:banking_mobile_app/utils/comman/header.dart';
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
     super.key,
   });
 
@@ -18,10 +18,10 @@ class FirstScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 40),
+              
               // 2lines, photo, 3dot icon
               const PHeader(),
-              const SizedBox(height: 60),
+              const SizedBox(height: 40),
 
               // Text and Money
               const Row(

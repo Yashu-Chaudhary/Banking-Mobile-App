@@ -1,4 +1,4 @@
-import 'package:banking_mobile_app/screens/first_screen.dart';
+import 'package:banking_mobile_app/screens/home_screen.dart';
 import 'package:banking_mobile_app/utils/comman/dialor_keys.dart';
 import 'package:banking_mobile_app/utils/comman/user_account_detail_container.dart';
 import 'package:banking_mobile_app/utils/constants/string_colors.dart';
@@ -21,7 +21,7 @@ class SendMoneyPage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: (() => Get.to(const FirstScreen())),
+          onPressed: (() => Get.to(const HomeScreen())),
         ),
       ),
       body: SingleChildScrollView(

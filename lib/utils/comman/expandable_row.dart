@@ -1,4 +1,6 @@
+import 'package:banking_mobile_app/screens/send_money.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PExpendableButtonRow extends StatefulWidget {
   const PExpendableButtonRow({super.key});
@@ -35,7 +37,7 @@ class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
         ExpendedButton(
           index: 2,
           isExpanded: expandedIndex == 2,
-          onPressed: () => toggleExpansion(2),
+          onPressed: () => Get.to(SendMoneyPage()),
         ),
       ],
     );

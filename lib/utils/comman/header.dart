@@ -1,3 +1,4 @@
+import 'package:banking_mobile_app/utils/comman/lines.dart';
 import 'package:banking_mobile_app/utils/constants/string_images.dart';
 import 'package:flutter/material.dart';
 
@@ -8,18 +9,22 @@ class PHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // Icon
-        Icon(
-          Icons.pending,
-          color: Colors.blue,
-          size: 30,
+        CustomPaint(
+          size: const Size(40, 20),
+          painter: LinePainter(),
         ),
+        // Icon(
+        //   Icons.pending,
+        //   color: Colors.blue,
+        //   size: 30,
+        // ),
     
         // AvatarPhoto
-        Column(
+        const Column(
           children: [
             PProfilePhoto(),
             
@@ -27,7 +32,7 @@ class PHeader extends StatelessWidget {
         ),
     
         // Icons
-        Icon(Icons.more_horiz),
+        const Icon(Icons.more_horiz),
       ],
     );
   }

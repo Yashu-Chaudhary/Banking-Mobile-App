@@ -9,6 +9,8 @@ import 'package:get/get.dart';
 
 class SendMoneyPage extends StatelessWidget {
   const SendMoneyPage({super.key});
+  
+ 
 
   @override
   Widget build(BuildContext context) {

@@ -16,13 +16,14 @@ class PExpendableButtonRow extends StatefulWidget {
 }
 
 class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
-  int expandedIndex = 1;
+  int expandedIndex = 0;
 
   static final List<Widget> button = [const SendButton(), const ReciveButton()];
 
-  @override
-  void setState(VoidCallback fn) {
-    button[expandedIndex];
+  void expandedContainer() {
+    setState(() {
+      expandedIndex = expandedIndex;
+    });
   }
 
   @override
@@ -34,15 +35,14 @@ class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
                 backgroundColor: PColors.primary,
                 icon: const Icon(Icons.north_east),
                 text: PTexts.send,
-                onPressed: () {
-                  expandedIndex = 0;
-                },
+                onPressed: () {},
               )
             : PCircularButton(
                 backgroundColor: PColors.primary,
                 icon: const Icon(Icons.north_east),
                 onTap: () {
                   expandedIndex = 0;
+                  expandedContainer();
                 },
               ),
         const SizedBox(width: 20),
@@ -51,14 +51,13 @@ class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
                 backgroundColor: Colors.green,
                 icon: const Icon(Icons.south_west),
                 text: PTexts.receive,
-                onPressed: () {
-                  expandedIndex = 1;
-                })
+                onPressed: () {})
             : PCircularButton(
                 backgroundColor: Colors.green,
                 icon: const Icon(Icons.south_west),
                 onTap: () {
                   expandedIndex = 1;
+                  expandedContainer();
                 },
               ),
         const SizedBox(width: 20),

@@ -1,4 +1,3 @@
-import 'package:banking_mobile_app/utils/comman/detail_container.dart';
 import 'package:banking_mobile_app/screens/home%20screen/widgets/expandable_row.dart';
 import 'package:banking_mobile_app/utils/constants/string_texts.dart';
 import 'package:banking_mobile_app/utils/comman/header.dart';

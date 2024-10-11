@@ -1,4 +1,3 @@
-import 'package:banking_mobile_app/utils/comman/detail_container.dart';
 import 'package:banking_mobile_app/utils/comman/recive_container.dart';
 import 'package:banking_mobile_app/utils/constants/string_texts.dart';
 import 'package:flutter/material.dart';

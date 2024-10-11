@@ -17,8 +17,6 @@ class _PDialorKeyboardState extends State<PDialorKeyboard> {
     setState(() {
       cal += num;
     });
-
-    print(cal);
   }
 
   // ------------Functon to Remove a element-----------

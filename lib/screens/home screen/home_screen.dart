@@ -11,20 +11,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding: EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               // 2lines, photo, 3dot icon
-              const PHeader(),
-              const SizedBox(height: 40),
+              PHeader(),
+              SizedBox(height: 40),
 
               // Text and Money
-              const Row(
+              Row(
                 children: [
                   SizedBox(width: 25),
                   Column(
@@ -39,46 +38,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
 
               // three buttons
-              const PExpendableButtonRow(),
-              const SizedBox(height: 20),
-
-              // Text
-              const Text(
-                PTexts.lastSend,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-              const SizedBox(height: 20),
-
-              //Sending Money Data in the Container
-              const PDetailContainer(
-                toSend: 'Groceries',
-                sendingAmount: '678',
-                sendingTime: '5:20 PM',
-              ),
-              const SizedBox(height: 10),
-              const PDetailContainer(
-                toSend: 'Shopping',
-                sendingAmount: '892',
-                sendingTime: '6:25 PM',
-              ),
-              const SizedBox(height: 10),
-              const PDetailContainer(
-                toSend: 'Parking',
-                sendingAmount: '200',
-                sendingTime: '8:25 PM',
-              ),
-              const SizedBox(height: 5),
-              Center(
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.keyboard_arrow_down,
-                        color: Colors.grey,
-                        size: 45,
-                      ))),
+              PExpendableButtonRow(),
+              SizedBox(height: 20),
             ],
           ),
         ),

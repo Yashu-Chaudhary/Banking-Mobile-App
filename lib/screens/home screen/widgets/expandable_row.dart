@@ -17,9 +17,6 @@ class PExpendableButtonRow extends StatefulWidget {
 
 class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
   int expandedIndex = 0;
-
-  static final List<Widget> button = [const SendButton(), const ReciveButton()];
-
   void expandedContainer() {
     setState(() {
       expandedIndex = expandedIndex;
@@ -28,44 +25,50 @@ class _PExpendableButtonRowState extends State<PExpendableButtonRow> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
-        expandedIndex == 0
-            ? PExpandedButtons(
-                backgroundColor: PColors.primary,
-                icon: const Icon(Icons.north_east),
-                text: PTexts.send,
-                onPressed: () {},
-              )
-            : PCircularButton(
-                backgroundColor: PColors.primary,
-                icon: const Icon(Icons.north_east),
-                onTap: () {
-                  expandedIndex = 0;
-                  expandedContainer();
-                },
-              ),
-        const SizedBox(width: 20),
-        expandedIndex == 1
-            ? PExpandedButtons(
-                backgroundColor: Colors.green,
-                icon: const Icon(Icons.south_west),
-                text: PTexts.receive,
-                onPressed: () {})
-            : PCircularButton(
-                backgroundColor: Colors.green,
-                icon: const Icon(Icons.south_west),
-                onTap: () {
-                  expandedIndex = 1;
-                  expandedContainer();
-                },
-              ),
-        const SizedBox(width: 20),
-        PCircularButton(
-          backgroundColor: Colors.pink,
-          icon: const Icon(Icons.category),
-          onTap: () => Get.to(const SendMoneyPage()),
+        Row(
+          children: [
+            expandedIndex == 0
+                ? PExpandedButtons(
+                    backgroundColor: PColors.primary,
+                    icon: const Icon(Icons.north_east),
+                    text: PTexts.send,
+                    onPressed: () {},
+                  )
+                : PCircularButton(
+                    backgroundColor: PColors.primary,
+                    icon: const Icon(Icons.north_east),
+                    onTap: () {
+                      expandedIndex = 0;
+                      expandedContainer();
+                    },
+                  ),
+            const SizedBox(width: 20),
+            expandedIndex == 1
+                ? PExpandedButtons(
+                    backgroundColor: Colors.green,
+                    icon: const Icon(Icons.south_west),
+                    text: PTexts.receive,
+                    onPressed: () {})
+                : PCircularButton(
+                    backgroundColor: Colors.green,
+                    icon: const Icon(Icons.south_west),
+                    onTap: () {
+                      expandedIndex = 1;
+                      expandedContainer();
+                    },
+                  ),
+            const SizedBox(width: 20),
+            PCircularButton(
+              backgroundColor: Colors.pink,
+              icon: const Icon(Icons.category),
+              onTap: () => Get.to(const SendMoneyPage()),
+            ),
+          ],
         ),
+        const SizedBox(height: 15),
+        expandedIndex == 0 ? const SendButton() : const ReciveButton(),
       ],
     );
   }

@@ -1,6 +1,9 @@
 # banking_mobile_app
 
 OUTPUT:-
+complete video:
+
+https://github.com/user-attachments/assets/210b1652-64b2-4f41-a721-49abddc5e630
 
 First Screen:
 

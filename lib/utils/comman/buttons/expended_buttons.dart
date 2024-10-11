@@ -6,16 +6,12 @@ class PExpandedButtons extends StatelessWidget {
     required this.backgroundColor,
     required this.icon,
     required this.text,
-    required this.index,
-    required this.isExpandable,
     required this.onPressed,
   });
 
-  final int index;
   final Color backgroundColor;
   final Icon icon;
   final String text;
-  final bool isExpandable;
   final VoidCallback onPressed;
 
   @override
@@ -45,7 +41,7 @@ class PExpandedButtons extends StatelessWidget {
                 child: IconButton(
                   icon: icon,
                   color: backgroundColor,
-                  onPressed: () {},
+                  onPressed: onPressed,
                 ),
               ),
             ),
@@ -59,4 +55,3 @@ class PExpandedButtons extends StatelessWidget {
     );
   }
 }
-
